@@ -1,5 +1,5 @@
 name:                wavefront-obj
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Wavefront .obj file loader
 description:         See <https://github.com/SASinestro/wavefront-obj/blob/master/README.md>.
 homepage:            https://github.com/sasinestro/wavefront-obj#readme
@@ -10,7 +10,7 @@ maintainer:          sasinestro@gmail.com
 copyright:           Copyright: (c) 2016 Alexis Williams
 category:            Graphics
 build-type:          Simple
--- extra-source-files:
+extra-source-files:  test/african_head.obj
 cabal-version:       >=1.10
 
 library
