@@ -72,7 +72,7 @@ type WavefrontModel = WavefrontModel' WavefrontFace
 
 --
 
-getVertexPoint :: (Monad m) => Int -> StateT WavefrontState m (Point V3 Double)
+getVertexPoint :: (MonadFail m) => Int -> StateT WavefrontState m (Point V3 Double)
 getVertexPoint idx' = do
     vertexPoints <- _vertexPoints <$> get
     let idx = if idx' > 0
@@ -89,7 +89,7 @@ appendVertexPoint p = do
 
 --
 
-getTextureCoordinate :: (Monad m) => Int -> StateT WavefrontState m (Point V2 Double)
+getTextureCoordinate :: (MonadFail m) => Int -> StateT WavefrontState m (Point V2 Double)
 getTextureCoordinate idx' = do
     textureCoordinates <- _textureCoordinates <$> get
     let idx = if idx' > 0
@@ -106,7 +106,7 @@ appendTextureCoordinate t = do
 
 --
 
-getVertexNormal :: (Monad m) => Int -> StateT WavefrontState m (V3 Double)
+getVertexNormal :: (MonadFail m) => Int -> StateT WavefrontState m (V3 Double)
 getVertexNormal idx' = do
     vertexNormals <- _vertexNormals <$> get
     let idx = if idx' > 0

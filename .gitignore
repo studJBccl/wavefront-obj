@@ -21,3 +21,5 @@ cabal.project.local
 
 .DS_Store
 test/jellybeans-out.*
+/wavefront-obj.iml
+/.idea/
